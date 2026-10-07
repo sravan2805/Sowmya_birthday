@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Akka ❤️</title>
+
+<style>
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   PAGE SYSTEM
+===================================================== */
+
+.page {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    min-height: 100vh;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =====================================================
+   PAGE 1
+===================================================== */
+
+#page1 {
+    position: absolute;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffb6d2;
+
+    overflow: hidden;
+}
+
+
+/* MAIN CONTENT */
+
+.opening-content {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    max-width: 700px;
+
+    padding: 30px;
+
+    animation: appear 2s ease;
+}
+
+
+/* SMALL HEADING */
+
+.small-text {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    margin-bottom: 20px;
+}
+
+
+/* BIRTHDAY HEADING */
+
+.opening-content h1 {
+    font-size: clamp(55px, 10vw, 100px);
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    color: #ffffff;
+
+    margin-bottom: 25px;
+}
+
+.opening-content h1 span {
+    display: block;
+
+    color: #ff01af;
+}
+
+
+/* WISH */
+
+.opening-wish {
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #120d0f;
+
+    max-width: 580px;
+
+    margin: auto;
+}
+
+
+/* HEART */
+
+.opening-heart {
+    font-size: 34px;
+
+    color: #e83f83;
+
+    margin-top: 25px;
+
+    animation: heartbeat 2s infinite;
+}
+
+
+/* BUTTON */
+
+.continue-button {
+    margin-top: 35px;
+
+    padding: 13px 28px;
+
+    border: 1px solid #7a3b55;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.226);
+
+    color: #312222;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.continue-button:hover {
+    background: white;
+
+    color: #e83f83;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   SMALL PINK HEARTS
+===================================================== */
+
+.heart-decoration {
+    position: absolute;
+
+    z-index: 2;
+
+    color: #ed4f91;
+
+    font-size: 28px;
+
+    opacity: 0.75;
+
+    animation: floatHeart 5s ease-in-out infinite;
+}
+
+
+/* HEART POSITIONS */
+
+.h1 {
+    left: 10%;
+    top: 25%;
+
+    animation-delay: 0s;
+}
+
+.h2 {
+    right: 12%;
+    top: 20%;
+
+    animation-delay: 1s;
+}
+
+.h3 {
+    left: 15%;
+    bottom: 23%;
+
+    animation-delay: 2s;
+}
+
+.h4 {
+    right: 15%;
+    bottom: 20%;
+
+    animation-delay: 3s;
+}
+
+.h5 {
+    left: 48%;
+    top: 10%;
+
+    animation-delay: 1.5s;
+}
+
+
+/* HEART MOVEMENT */
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translate(0, 0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(15px, -12px) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(-5deg);
+    }
+
+}
+
+
+/* PAGE APPEAR */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* HEARTBEAT */
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =====================================================
+   PAGE 2
+===================================================== */
+
+#page2 {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ffc5dc 0%,
+            #ff9fc4 45%,
+            #f77fae 100%
+        );
+
+    overflow-y: auto;
+}
+
+
+/* MAIN CONTENT */
+
+.page2-content {
+
+    width: min(750px, 100%);
+
+    min-height: 100vh;
+
+    padding: 45px 25px 60px;
+
+    text-align: center;
+
+    margin: auto;
+}
+
+
+/* TOP TITLE */
+
+.page2-title {
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #b52f68;
+
+    margin-bottom: 8px;
+}
+
+
+.title-heart-line {
+
+    color: #d93678;
+
+    font-size: 18px;
+
+    margin-bottom: 25px;
+
+    opacity: 0.8;
+}
+
+
+/* =====================================================
+   PHOTO AREA
+===================================================== */
+
+.memory-photo-area {
+
+    position: relative;
+
+    width: min(500px, 90%);
+
+    margin: 0 auto 45px;
+}
+
+
+/* PHOTO FRAME */
+
+.photo-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 310px;
+
+    padding: 13px;
+
+    background: #fffafc;
+
+    border: 1px solid rgba(150, 50, 90, 0.2);
+
+    box-shadow:
+        0 15px 35px rgba(120, 30, 70, 0.18);
+
+    transform: rotate(-2deg);
+}
+
+
+/* PHOTO */
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   HEART DECORATIONS AROUND PHOTO
+===================================================== */
+
+.photo-decoration {
+
+    position: absolute;
+
+    z-index: 3;
+
+    color: #e83f83;
+
+    pointer-events: none;
+}
+
+
+.heart-left {
+
+    left: -25px;
+
+    top: 35px;
+
+    font-size: 35px;
+
+    transform: rotate(-15deg);
+}
+
+
+.heart-right {
+
+    right: -25px;
+
+    top: 20px;
+
+    font-size: 42px;
+
+    transform: rotate(15deg);
+}
+
+
+.small-heart-1 {
+
+    left: -15px;
+
+    bottom: 30px;
+
+    font-size: 20px;
+}
+
+
+.small-heart-2 {
+
+    right: -15px;
+
+    bottom: 20px;
+
+    font-size: 24px;
+}
+
+
+/* =====================================================
+   WHY TITLE
+===================================================== */
+
+.why-title {
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #24151b;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.page2-message {
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+.page2-message p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #24151b;
+
+    margin-bottom: 18px;
+}
+
+
+/* FINAL SPECIAL MESSAGE */
+
+.special-message {
+
+    margin-top: 28px;
+
+    color: #a52b61 !important;
+
+    font-size: 20px !important;
+
+    font-weight: bold;
+
+    line-height: 1.8 !important;
+}
+
+
+/* =====================================================
+   LETTER BUTTON
+===================================================== */
+
+.letter-button {
+
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #e83f83;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(120, 30, 70, 0.18);
+
+    transition: 0.3s;
+}
+
+
+.letter-button:hover {
+
+    background: #d83274;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   PAGE 3
+===================================================== */
+
+#page3 {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ffc5dc 0%,
+            #ff9fc4 45%,
+            #f77fae 100%
+        );
+
+    overflow-y: auto;
+}
+
+
+/* MAIN LETTER AREA */
+
+.letter-page {
+
+    width: min(700px, 100%);
+
+    padding: 50px 25px 60px;
+
+    margin: auto;
+}
+
+
+/* DATE */
+
+.letter-date {
+
+    text-align: right;
+
+    color: #6b3048;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 30px;
+}
+
+
+/* SMALL TITLE */
+
+.letter-small-title {
+
+    text-align: center;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #b52f68;
+
+    margin-bottom: 15px;
+}
+
+
+/* LETTER HEADING */
+
+.letter-page h2 {
+
+    text-align: center;
+
+    font-size: 46px;
+
+    font-weight: normal;
+
+    color: #24151b;
+
+    margin-bottom: 40px;
+}
+
+
+/* LETTER CONTENT */
+
+.letter-content {
+
+    background: rgba(255, 255, 255, 0.35);
+
+    padding: 35px 32px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    box-shadow:
+        0 12px 35px rgba(120, 30, 70, 0.12);
+}
+
+
+/* PARAGRAPHS */
+
+.letter-content p {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #24151b;
+
+    margin-bottom: 22px;
+}
+
+
+/* IMPORTANT LINES */
+
+.letter-highlight {
+
+    color: #9d285b !important;
+
+    font-weight: bold;
+}
+
+
+/* FINAL MESSAGE */
+
+.final-message {
+
+    text-align: center;
+
+    font-size: 20px !important;
+
+    color: #9d285b !important;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+
+
+/* SIGNATURE */
+
+.signature {
+
+    text-align: right;
+
+    color: #6b3048 !important;
+
+    font-size: 18px !important;
+
+    margin-top: 35px;
+
+    margin-bottom: 0 !important;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+
+    display: block;
+
+    margin: 35px auto 0;
+
+    padding: 13px 27px;
+
+    border: 1px solid #9d285b;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    color: #6b3048;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+
+    background: white;
+
+    color: #d93678;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .opening-content h1 {
+        font-size: 58px;
+    }
+
+    .opening-wish {
+        font-size: 17px;
+    }
+
+    .heart-decoration {
+        font-size: 23px;
+    }
+
+
+    /* PAGE 2 */
+
+    .page2-content {
+
+        padding: 35px 18px 50px;
+
+    }
+
+    .page2-title {
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .photo-frame {
+
+        height: 250px;
+
+    }
+
+    .why-title {
+
+        font-size: 35px;
+
+    }
+
+    .page2-message p {
+
+        font-size: 17px;
+
+        line-height: 1.75;
+
+    }
+
+    .special-message {
+
+        font-size: 18px !important;
+
+    }
+
+    .heart-left {
+
+        left: -12px;
+
+    }
+
+    .heart-right {
+
+        right: -12px;
+
+    }
+
+
+    /* PAGE 3 */
+
+    .letter-page {
+
+        padding: 35px 18px 50px;
+
+    }
+
+    .letter-page h2 {
+
+        font-size: 38px;
+
+    }
+
+    .letter-content {
+
+        padding: 28px 22px;
+
+    }
+
+    .letter-content p {
+
+        font-size: 17px;
+
+        line-height: 1.8;
+
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PAGE 1
+====================================================== -->
+
+<section class="page active" id="page1">
+
+    <!-- Small pink heart decorations -->
+
+    <div class="heart-decoration h1">♥</div>
+
+    <div class="heart-decoration h2">♥</div>
+
+    <div class="heart-decoration h3">♥</div>
+
+    <div class="heart-decoration h4">♥</div>
+
+    <div class="heart-decoration h5">♥</div>
+
+
+    <!-- Birthday message -->
+
+    <div class="opening-content">
+
+        <div class="small-text">
+            A little something for you
+        </div>
+
+
+        <h1>
+
+            Happy Birthday
+
+            <span>
+                Sowmya ❤️
+            </span>
+
+        </h1>
+
+
+        <p class="opening-wish">
+
+            Some people make life beautiful
+            just by being a part of it.
+
+            <br>
+
+            I'm lucky that you're my sister.
+
+        </p>
+
+
+        <div class="opening-heart">
+            ♡
+        </div>
+
+
+        <button
+            class="continue-button"
+            onclick="goToPage(2)"
+        >
+            I have something for you →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2
+====================================================== -->
+
+<section class="page" id="page2">
+
+    <div class="page2-content">
+
+        <!-- TITLE -->
+
+        <div class="page2-title">
+            ♥ &nbsp; OUR SWEET MEMORY &nbsp; ♥
+        </div>
+
+        <div class="title-heart-line">
+            ♡ ───────── ♥ ───────── ♡
+        </div>
+
+
+        <!-- PHOTO -->
+
+        <div class="memory-photo-area">
+
+            <div class="photo-decoration heart-left">
+                ♥
+            </div>
+
+            <div class="photo-decoration heart-right">
+                ♥
+            </div>
+
+            <div class="photo-decoration small-heart-1">
+                ♥
+            </div>
+
+            <div class="photo-decoration small-heart-2">
+                ♥
+            </div>
+
+
+            <div class="photo-frame">
+
+                <img
+                    src="Photo.jpeg"
+                    alt="A special memory"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- SPECIAL MOMENT -->
+
+        <div class="why-title">
+            This is our Special moment
+        </div>
+
+
+        <div class="page2-message">
+
+            <p>
+                Ee special moment nunchi mana best friends bond
+                Spl brother and sisters bond laga marindhi😅
+            </p>
+
+
+            <p>
+                Aa moment nunchi ipati varaku mana bond
+                inka strong avthu vachindhi💝
+            </p>
+
+
+            <p>
+                Nenu normal ga first year lo oka introvert
+                natho evaru ekuva sepu matladaru😅
+                anni anukuney vadini but nuvu and shiri valla
+                i changed my perpective.
+            </p>
+
+
+            <p class="special-message">
+
+                Ela connect ayamo telidu but
+                Na life lo Nuvu oka spl bond
+
+            </p>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <button
+            class="letter-button"
+            onclick="goToPage(3)"
+        >
+            A personalised letter for you ❤️ →
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 3
+====================================================== -->
+
+<section class="page" id="page3">
+
+    <div class="letter-page">
+
+        <!-- DATE -->
+
+        <div class="letter-date">
+            07 • 10 • 2026
+        </div>
+
+
+        <!-- LETTER TITLE -->
+
+        <div class="letter-small-title">
+            A personalised letter ❤️
+        </div>
+
+
+        <h2>
+            Happy Birthday Sowmya❤️
+        </h2>
+
+
+        <!-- PERSONAL LETTER -->
+
+        <div class="letter-content">
+
+            <p>
+                First of all, Sorry for late wishes
+            </p>
+
+
+            <p>
+                Nenu midnight ye wish chedham anukunna kani
+                oka normal message petti or insta story petti
+                wish chesey normal person kadhu nuvu na life lo.
+            </p>
+
+
+            <p>
+                Na life lo Nuvu spl oo na birthday wish kuda
+                anthey spl ga undali anni chala plans alochinchanu
+                but ee madhya asalu endhuko teliyadam ledhu
+                na life chala complicate ipoindhi
+            </p>
+
+
+            <p>
+                Intlo godavalu,adhey time ki ee job ravadam
+                naku job vachinapudu nundi asalu happyness ye ledhu
+                prathi roju edo oka kotha depression
+            </p>
+
+
+            <p>
+                ninna same deepu dagi birthday apudu plan chesina
+                timeline chedham anukunna but asalu time ledhu
+                last ki eroju antha alochinchi idhi chesanu
+                idhi mari niku antha spl ga anipinchaka poyina parledhu.
+            </p>
+
+
+            <p>
+                Sorry from my end because nenu best ga cheyaleka poyanu
+                Eroju kuda full headache sessions attend avthu,
+                intlo panulu chestu,asalu eroju salary account chepiyali
+                anni hdfc bank ki vellanu apudey nuvu satya video call chesaru,
+            </p>
+
+
+            <p>
+                Aa video call kuda miss ayanu anni inko depression😅
+                inka last ki ninnu edo okati chesi spl ga feel chedham
+                anni ee website chesanu
+            </p>
+
+
+            <p class="letter-highlight">
+
+                Nenu prathi sari chepaka povachu nuvu naku chala spl,
+                Nenu chala lucky nuvu na life of unadhuku💝.
+
+            </p>
+
+
+            <p class="letter-highlight">
+
+                I wanted you to feel a little more special
+                on your special day.
+
+            </p>
+
+
+            <p>
+
+                That's the whole reason behind this.
+
+            </p>
+
+
+            <p class="final-message">
+
+                Happy Birthday, Sowmya. ❤️
+
+                <br>
+
+                I hope you always stay happy,
+                keep smiling, and continue being the same
+                wonderful person you are.
+
+            </p>
+
+
+            <p class="signature">
+
+                With lots of love,
+
+                <br>
+
+                Your waste brother ❤️
+
+                <br>
+
+                sravan
+
+            </p>
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+
+        <button
+            class="back-button"
+            onclick="goToPage(2)"
+        >
+
+            ← Back to our memory
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE NAVIGATION
+====================================================== -->
+
+<script>
+
+function goToPage(pageNumber) {
+
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(page) {
+
+        page.classList.remove("active");
+
+    });
+
+
+    const selectedPage =
+        document.getElementById("page" + pageNumber);
+
+
+    if (selectedPage) {
+
+        selectedPage.classList.add("active");
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
